@@ -1,0 +1,32 @@
+services:
+  # PHP Service
+  php:
+    build:
+      context: .              # Build context is current directory
+      dockerfile: docker/php/Dockerfile
+    container_name: php83_ambient # Name our container
+    volumes:
+      - ./src:/var/www/public   # Mount our source code
+    networks:
+      - ambient-network          # Connect to our network
+    # Make container restart unless stopped manually
+    restart: unless-stopped
+
+  # Nginx Service
+  nginx:
+    image: nginx:latest      # Use official Nginx image
+    container_name: nginx_ambient
+    ports:
+      - "8080:80"           # Map port 8080 on our PC to 80 in container
+    volumes:
+      - ./src:/var/www/public  # Mount same source code
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php                 # Wait for PHP container
+    networks:
+      - ambient-network
+    restart: unless-stopped
+
+networks:
+  ambient-network:
+    driver: bridge          # Standard Docker network type
