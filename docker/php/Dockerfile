@@ -8,25 +8,16 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \            
     libonig-dev \           
     libxml2-dev \           
-    libzip-dev \           
-    libicu-dev \            
-    zip \                   
-    unzip                   
+    libicu-dev                  
 
 # Clean up to reduce image size
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
 # Each one serves specific purpose:
-RUN docker-php-ext-install \
-    pdo_mysql \            
-    mbstring \             
-    exif \                 
-    pcntl \                
-    bcmath \               
-    gd \                   
-    intl \                 
-    zip \                  
+RUN docker-php-ext-install \           
+    mbstring \               
+    bcmath \                              
     opcache               
 
 # Redis for caching/sessions

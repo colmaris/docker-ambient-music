@@ -1,0 +1,284 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Ambient music">
+<meta name="keywords" content="ambient,chillout,background,music,minecraft,gameplay">
+    
+<title>Ambient</title>
+<style>
+body {
+	font-size: 1em;
+    background-color: #23313A;
+    background: url("background.jpg") no-repeat, url("background-min.jpg") no-repeat, #23313A ;;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Trebuchet MS",sans-serif;
+    color: #fff;
+}
+a {
+	text-decoration: none;
+	color: #ff0;
+}
+a:hover { 
+	text-decoration: underline;
+}
+#container {
+	text-align: center;
+	padding-top: 5%;
+}
+#title1 { 
+	text-align: center;
+	font-size: 8vw;
+	text-shadow:0px 0px 10px #000000,0px 0px 10px #000000,0px 0px 5px #000000;
+}
+#title2 { 
+	text-align: center;
+	font-size: 1.5vw;
+	text-shadow:0px 0px 10px #000000,0px 0px 10px #000000,0px 0px 5px #000000;
+}
+#composers {
+    background: rgba(0,0,0,0.65);
+    border-radius: 15px;
+    padding: 15px;
+    text-shadow:0px 0px 10px #000000,0px 0px 10px #000000,0px 0px 5px #000000,0px 0px 5px #000000,0px 0px 5px #000000; 
+    margin-left: 25%;
+    margin-right: 25%;
+	margin-top: 15px;
+}
+
+#instructions { 
+	font-size:0.8em; 
+	text-shadow:0px 0px 10px #000000,0px 0px 10px #000000,0px 0px 5px #000000,0px 0px 5px #000000,0px 0px 5px #000000;
+	margin-top: 30px;
+}
+
+#playwith {
+	text-align: center;
+  margin-top: 20px;
+}
+
+#htmlplayer {
+  padding: 5px 0px 5px 0px;
+  margin-left: 20%;
+  margin-right: 20%;
+	margin-top: 15px;
+	font-size: 1.3em;
+}
+
+#htmlplayer button {
+	height: 30px;
+}
+
+audio {
+	width: 500px;
+	display: inline;
+  position: relative;
+  top: 16px;
+}
+
+#songNumber {
+	color: rgb(180,180,180);
+	margin-right: 5px;
+	
+}
+#songTitle {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#buttonPrevious, #buttonNext {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.playbutton {
+	-moz-box-shadow:inset 0px 2px 2px 0px #94b079;
+	-webkit-box-shadow:inset 0px 2px 2px 0px #94b079;
+	box-shadow:inset 0px 2px 2px 0px #94b079;
+	background-color:#464f2e;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:42px;
+	-moz-border-radius-bottomright:42px;
+	border-bottom-right-radius:42px;
+	-webkit-border-bottom-left-radius:42px;
+	-moz-border-radius-bottomleft:42px;
+	border-bottom-left-radius:42px;
+	border:1px solid #000000;
+	display:inline-block;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	width:135px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+	padding: 2px 0px 2px 0px;
+	margin: 5px 5px 0px 5px;
+}.playbutton:hover {
+	background-color:#6c7d45;
+	text-decoration:none;
+}.playbutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com
+Yeah I'm lazy. Sue me.
+ */
+
+
+/* CSS Tooltip from http://www.impressivewebs.com/pure-css-tool-tips/ */
+    a[data-tooltip]:link, a[data-tooltip]:visited {  
+        position: relative;  
+        text-decoration: none;  
+    }  
+      
+    a[data-tooltip]:before {  
+      content: "";  
+      position: absolute;  
+      border-top: 20px solid rgb(200,200,0);  
+      border-left: 30px solid transparent;  
+      border-right: 30px solid transparent;  
+      visibility: hidden;  
+      top: -22px;  
+      left: 35px;  
+    }  
+      
+    a[data-tooltip]:after {  
+      content: attr(data-tooltip);  
+      position: absolute;  
+      color: black;  
+      text-shadow: none;
+      top: -39px;  
+      left: 35px;  
+      background: rgb(200,200,0);  
+      padding: 5px 15px;  
+      -webkit-border-radius: 10px;  
+      -moz-border-radius: 10px;  
+      border-radius: 10px;  
+      white-space: nowrap;  
+      visibility: hidden;  
+      font-weight:normal;
+    }  
+      
+    a[data-tooltip]:hover:before, a[data-tooltip]:hover:after {  
+      visibility: visible;  
+      -webkit-transition: visibility 0s linear .3s;  
+      -moz-transition: visibility 0s linear .3s;  
+      -o-transition: visibility 0s linear .3s;  
+      transition: visibility 0s linear .3s;  
+    }  
+
+@media screen and (max-width: 1260px) {
+  #title1 { font-size: 10vw; }
+  #title2 { font-size: 2.5vw; }
+  #composers { font-size: 0.9em; margin-left: 20%; margin-right: 20%; }
+  #htmlplayer { margin-left: 10%; margin-right: 10%; }
+  audio {	width: 400px; }
+  #instructions { font-size: 0.7em; }
+}
+@media screen and (max-width: 700px) {
+  #title1 { font-size: 3em; }
+  #title2 { font-size: 1em; }
+  #composers { font-size: 0.9em; margin-left: 5%; margin-right: 5%; }
+  #htmlplayer { margin-left: 10%; margin-right: 10%; }
+  audio {	width: 300px; }
+  #instructions { font-size: 0.7em; }
+}
+</style>
+</head>
+<body>
+<div id="container">
+
+	<div id="title1">Ambient Music</div>
+	<div id="title2">My favorite soundtracks<br>such as Minecraft, Frostpunk, Warcraft and others ...</div>
+
+	<div id="composers">
+        Handpicked ambient musics for work, focus and chill-out<br>from <a href="http://c418.bandcamp.com/">C418</a>, <a href="https://www.last.fm/music/Russell+Brower">Russell Brower</a>, <a hrel="https://www.last.fm/music/Piotr+Musia%C5%82">Piotr Musiał</a>,  and various artists.<br>
+		<br>
+		 Total playtime: 1 hour 12 minutes
+	</div>
+	
+	<div id="instructions">
+		<div id="htmlplayer">
+			<span id="songNumber">(/)</span> <span id="songTitle">Title</span> - <span id="songArtist">Artist</span><br />
+			<button id="buttonPrevious" onclick="previousSong();">◀</button>
+			<button id="buttonNext" onclick="nextSong();">▶</button>
+			<audio controls id="audio" width="700" height="100"></audio>
+		</div>
+		
+		<div id="playwith">
+			<center>Alternative play method:</center>
+			<a href="playlist.m3u" class="playbutton" data-tooltip="Open this file with your favorite media player (such as VLC).">M3U Playlist</a> 
+		</div>
+		<br style="clear:both;">
+<!--
+         . o .
+         . . o     Hello, hacker.  If you prefer to download all musics for offline listening:
+         o o o     wget https://draconis.me/ambient/playlist.m3u ; wget -i playlist.m3u
+-->
+	</div>
+</div>
+<script type="text/javascript">
+
+// A very crude HTML Audio player.
+// Uses as source a xspf playlist containing links to mp3 files.
+// Author: sebsauvage at sebsauvage dot net
+// Licence: Public domain
+// Mood: I hate javascript.
+
+var playlist;  // The list of songs
+var currentSong=-1;  // current song index in playlist
+var audioplayer = document.getElementById('audio');   // audioplayer.
+
+// Resize previous/next buttons to match audio player height.
+document.getElementById('buttonPrevious').style.height = audioplayer.clientHeight;
+document.getElementById('buttonNext').style.height = audioplayer.clientHeight;
+
+// Get the xspf playlist
+const req = new XMLHttpRequest();
+req.open('GET', 'xspf_playlist.php', true); // Note that xspf_playlist.php returns a shuffled playlist each time.
+req.overrideMimeType('text/xml');
+req.onload = parseXSPF;
+req.send(null);
+
+// Parse XSPF xml once received.
+function parseXSPF() {
+	playlist = Array.from(req.responseXML.documentElement.children[1].children); // xml.playlist.tracklist
+    currentSong = 0;
+    playCurrentSong();
+}
+
+// Switch to next song.
+function nextSong() {
+	currentSong++;
+	if (currentSong >= playlist.length) { currentSong = 0; }
+	playCurrentSong();
+}
+
+// Switch to previous song.
+function previousSong() {
+	currentSong--;
+	if (currentSong < 0) { currentSong = playlist.length-1; }
+	playCurrentSong();
+}
+
+function playCurrentSong() {
+	audioplayer.src = playlist[currentSong].children[0].textContent; // URL of song (xml.playlist.tracklist.track.location)
+	audioplayer.onended = nextSong.bind(null);  // Autplay next song when this song ends.
+	document.getElementById('songNumber').textContent = '[' + (currentSong+1) + '/' + playlist.length + ']';
+	document.getElementById('songTitle').textContent = playlist[currentSong].children[1].textContent; // xml.playlist.tracklist.track.title
+	document.getElementById('songArtist').textContent = playlist[currentSong].children[2].textContent; // xml.playlist.tracklist.track.creator
+	audioplayer.play();
+}
+
+</script>
+</body>
+</html>
