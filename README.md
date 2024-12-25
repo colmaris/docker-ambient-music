@@ -17,11 +17,10 @@ This project uses Docker to deploy a Ambient music player with Nginx as the web 
 
    `cd src/`
 
-3. Install getiD3 lib from [here](https://www.getid3.org/)
 
-4. Copy your music file in mp3
+3. Copy your music file in mp3
 
-5. Build and start the containers with Docker Compose:
+4. Build and start the containers with Docker Compose:
 
    docker-compose up --build
 
